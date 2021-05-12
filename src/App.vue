@@ -1,30 +1,82 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <component :is="layout">
+
+    <router-view/>
+  </component>
+
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import LayoutWithNavbar from "@/Layout/LayoutWithNavbar";
+import MainLayout from "@/Layout/MainLayout";
+export default {
+  components:{
+    LayoutWithNavbar,MainLayout
+  },
+  computed:{
+    layout(){
+      return (this.$route.meta.layout || 'LayoutWithNavbar')
+    }
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body{
+  box-sizing: border-box;
+  margin: 0;
+  background: #e0e0e0;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.active{
+  border-right: 3px solid #790e8b;
+  box-shadow: 0 0 20px rgba(193,88,220,0.5);
+}
+h2{
+  font-size: 40px;
+  text-transform: uppercase;
+}
+input[type="number"]{
+  height: 46px;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  font-size: 24px;
+  padding-left: 20px;
+  margin: 5px;
+  outline: none;
+}
+input:focus{
+  box-shadow: 0 0 5px #000;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+button{
+  width: 286px;
+  height: 46px;
+  font-size: 18px;
+  line-height: 46px;
+  cursor: pointer;
+  border: none;
+  background: #c7c7c7;
+  border-radius: 23px;
+  margin: 5px 0;
+  outline: none;
+}
+button:hover{
+  background-color:  #c158dc;
+  transition: .5s;
+  color: #fff;
+}
+button:focus{
+  box-shadow: 0 0 5px #000;
 }
 </style>
