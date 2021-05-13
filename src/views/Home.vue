@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>Choose a tools</h2>
+    <h2>Choose a tools gg</h2>
   <Link/>
   </div>
   <router-view/>
