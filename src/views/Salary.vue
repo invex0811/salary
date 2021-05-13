@@ -25,9 +25,7 @@
       <span>Money: {{ '$ ' + totalCalc }}</span>
       <span v-if="taxFivePercentCheck">Tax 5%: {{taxFivePercentCalc.toFixed(2)}}</span>
     </div>
-    <div class="message" v-else>
-      <span>Введите данные :)</span>
-    </div>
+    
 
   </div>
   <router-view/>

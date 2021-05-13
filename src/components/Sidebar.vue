@@ -55,6 +55,7 @@ export default {
 }
 a{
   text-decoration: none;
+  color: #790e8b;
 }
 a:active{
   color: #c158dc;

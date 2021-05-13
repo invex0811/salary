@@ -26,6 +26,7 @@
         </tr>
       </tbody>
     </table>
+    <h2>coming soon</h2> 
   </div>
   <router-view/>
 </template>

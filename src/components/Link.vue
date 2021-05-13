@@ -24,7 +24,8 @@ export default {
   data: () => ({
     links: [
       {img: 'fi-rr-dollar', title: 'Salary', url: '/salary'},
-      {img: 'fi-rr-dashboard', title: 'Over Speed', url: '/overSpeed'},
+      {img: 'fi-rr-dashboard', title: 'Over speed', url: '/overSpeed'},
+      {img: 'fi-rr-time-forward-ten', title: 'Converting time', url: '/convertingTime'},
     ]
   })
 }
