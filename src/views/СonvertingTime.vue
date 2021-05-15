@@ -1,15 +1,28 @@
 <template>
   <div class="convertingTime">
     <h2>Converting time</h2>
-    <div class="wrapperTenths">
-      <div class="TenthToTime">
-        <TenthToTime/>
+    <div class="wrapperTenths" >
+      <div class="wrapper_buttons">
+        <button
+            @click="currentTab = 'TenthToTime'"
+            class="button-left buttons"
+            :class="{'active': currentTab === 'TenthToTime' }"
+        >
+          Convert to time
+        </button>
+        <button
+            @click="currentTab = 'TimeToTenth'"
+            class="button-right buttons"
+            :class="{'active': currentTab === 'TimeToTenth' }"
+        >
+          Convert to tenth
+        </button>
       </div>
-      <div class="TimeToTenth">
-        <TimeToTenth/>
-      </div>
-    </div>
+      <keep-alive>
+        <component :is="currentTab" />
+      </keep-alive>
 
+    </div>
   </div>
 </template>
 
@@ -21,10 +34,14 @@ export default {
   components: {TimeToTenth, TenthToTime},
   data() {
     return {
-
+      currentTab: 'TenthToTime',
+      tabs: [
+        {title: 'Convert to time', id: 'TenthToTime'},
+        {title: 'Convert to tenth', id: 'TimeToTenth'}
+      ]
     }
   },
-  methods:{
+  computed: {
 
   }
 }
@@ -38,8 +55,26 @@ export default {
 }
 .wrapperTenths{
   display: flex;
+  flex-direction: column;
 }
-.TenthToTime, TimeToTenth{
-  padding: 0 200px;
+.wrapper_buttons{
+  display: flex;
+  justify-content: center;
+}
+.button-left{
+  border-radius: 23px 0 0 23px;
+}
+.button-right{
+  border-radius: 0 23px 23px 0;
+}
+.active{
+  background-color:  #c158dc;
+  color: #fff;
+}
+.buttons{
+  border: none;
+}
+.buttons:focus{
+  box-shadow: 0 0 0;
 }
 </style>

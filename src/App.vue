@@ -43,7 +43,7 @@ input[type="number"]{
   height: 46px;
   border: none;
   background: #FFFFFF;
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   border-radius: 23px;
   font-size: 24px;
   padding-left: 20px;
