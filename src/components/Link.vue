@@ -62,4 +62,8 @@ a{
   text-decoration: none;
   color: black;
 }
+.active{
+  border-right: 3px solid #790e8b;
+  box-shadow: 0 0 20px rgba(193,88,220,0.5);
+}
 </style>

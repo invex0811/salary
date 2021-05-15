@@ -12,7 +12,7 @@
       OK
     </button>
     <div class="speed">
-      <span>Speed:</span><span v-if="timeHours > 0" :class="{'redSpeed' : overSpeed > 95}">{{speed}}</span>
+     <span v-if="timeHours > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' + speed}}</span>
     </div>
   </div>
   <router-link
@@ -83,5 +83,8 @@ span{
   top: 60px;
   font-size: 30px;
   text-decoration: none;
+}
+.speed{
+  margin-top: 20px;
 }
 </style>

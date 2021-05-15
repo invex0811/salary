@@ -31,10 +31,6 @@ body{
   margin: 0;
   background: #e0e0e0;
 }
-.active{
-  border-right: 3px solid #790e8b;
-  box-shadow: 0 0 20px rgba(193,88,220,0.5);
-}
 h2{
   font-size: 40px;
   text-transform: uppercase;

@@ -63,4 +63,9 @@ a:active{
 i{
   margin-bottom: -5px;
 }
+.active{
+  border-right: 3px solid  #c158dc;
+  box-shadow: 0 0 20px rgba(193,88,220,0.5);
+  color: #c158dc;
+}
 </style>

@@ -73,6 +73,8 @@ export default {
 }
 .buttons{
   border: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .buttons:focus{
   box-shadow: 0 0 0;
