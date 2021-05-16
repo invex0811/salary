@@ -11,7 +11,7 @@
       <label for="vacation" title="Отпуск 4%">Vacation:<input id="vacation" type="checkbox" v-model="vacation" ></label><div class="vertical-line"></div>
       <label for="tax" title="Налог +45$">Tax:<input id="tax" type="checkbox" v-model="tax" ></label><div class="vertical-line"></div>
       <label for="bonusCheck" title="Премия">Bonus:<input id="bonusCheck" type="checkbox" v-model="bonusCheck"></label><div class="vertical-line"></div>
-      <label for="tax5" title="Налог 5%">Tax 5%:<input  id="tax5" type="checkbox" v-model="taxFivePercentCheck"></label>
+      <label for="tax5" title="Налог 5%">Tax 5% and salary UAH:<input  id="tax5" type="checkbox" v-model="taxFivePercentCheck"></label>
     </div>
 
     <button v-on:click='calcMoney()'>OK</button>
@@ -24,14 +24,17 @@
       <span v-if="bonusCheck">Bonus: {{ bonus }}</span>
       <span>Money: {{ '$ ' + totalCalc }}</span>
       <span v-if="taxFivePercentCheck">Tax 5%: {{taxFivePercentCalc.toFixed(2)}}</span>
+      <span v-if="taxFivePercentCheck">Salary UAH: {{calcSalaryUAH}}</span>
     </div>
-    
+
+
 
   </div>
   <router-view/>
 </template>
 
 <script>
+
 export default {
   name: "Salary",
   data(){
@@ -47,6 +50,7 @@ export default {
       tax: '',
       taxFivePercentCheck: '',
       dollarRate: '',
+      salaryUAH: '',
     }
   },
   methods:{
@@ -94,14 +98,15 @@ export default {
       return Math.round(this.totalMoney + ( this.fourPercent + this.checkTax + this.bonusCalc));
 
     },
+    calcSalaryUAH(){
+      return this.totalCalc * this.dollarRate
+    },
     taxFivePercentCalc(){
 
       return this.totalCalc * this.dollarRate / 100 * (this.taxFivePercentCheck * 5);
 
     },
-
-
-  }
+  },
 
 }
 
