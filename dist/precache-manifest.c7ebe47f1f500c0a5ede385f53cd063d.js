@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/css/chunk-e18f4720.0d1b5ca2.css"
   },
   {
-    "revision": "7ca6de6e02314aa857cacbab10a1e98e",
+    "revision": "96c8fe8981e6c6e98cd6bb97156bf1e8",
     "url": "/salary/index.html"
   },
   {
