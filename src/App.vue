@@ -35,7 +35,7 @@ h2{
   font-size: 40px;
   text-transform: uppercase;
 }
-input[type="number"]{
+input[type="number"], input[type="text"]{
   height: 46px;
   border: none;
   background: #FFFFFF;

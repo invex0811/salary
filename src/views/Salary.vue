@@ -20,7 +20,7 @@
       <span>Time: {{ time }}</span>
       <span>Over time: {{ overTime }}</span>
       <span>Rate: {{ rate }}</span>
-      <span>Over rate: {{ overRate }}</span>
+      <span v-if="time > 160">Over rate: {{ overRate }}</span>
       <span v-if="bonusCheck">Bonus: {{ bonus }}</span>
       <span>Money: {{ '$ ' + totalCalc }}</span>
       <span v-if="taxFivePercentCheck">Tax 5%: {{taxFivePercentCalc.toFixed(2)}}</span>
@@ -60,7 +60,7 @@ export default {
 
         this.totalMoney = this.time * this.rate;
 
-      }else if (this.rate == 2) {
+      }else if (this.rate === 2) {
 
 
         this.overRate = 2;

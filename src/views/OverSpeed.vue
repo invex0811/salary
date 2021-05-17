@@ -15,24 +15,25 @@
      <span v-if="timeHours > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' + speed}}</span>
     </div>
   </div>
-  <router-link
-      tag="div"
-      class="speedList"
-      :to="url"
-      title='Coming soon'
+  <div class="speedList">
+    <i class="fi-rr-document " @click="showModal"></i>
+    <span class="span-speed-list">Speed <br> list</span>
+  </div>
 
-  >
 
-    <i  class="fi-rr-document"></i>
- </router-link>
+      <SpeedList ref="modal"/>
+
+
   <router-view/>
 </template>
 
 <script>
+import SpeedList from "@/views/SpeedList";
+
 export default {
   name: "OverSpeed",
+  components: {SpeedList},
   data: () => ({
-    url: '/speedList',
     timeHours: '',
     timeMinutes: '',
     miles: '',
@@ -46,6 +47,9 @@ export default {
       this.speed = this.miles / this.totalTime
       this.overSpeed = Number(this.speed)
       this.speed = this.speed.toFixed(2) + ' mph'
+    },
+    showModal(){
+      return this.$refs.modal.show = true
     }
   },
 
@@ -79,12 +83,25 @@ span{
 }
 .speedList{
   position: absolute;
-  right: 10px;
-  top: 60px;
+  right: 20px;
+  top: 70px;
   font-size: 30px;
   text-decoration: none;
+  cursor: pointer;
+  color: #790e8b;
+  text-align: center;
+}
+.speedList:hover{
+  color: #c158dc;
+  transition: .3s;
 }
 .speed{
   margin-top: 20px;
 }
+.span-speed-list{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+
 </style>
