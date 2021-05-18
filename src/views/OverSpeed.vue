@@ -8,7 +8,7 @@
     <div class="mile">
       <input type="number" id="mile" v-model.number="miles" placeholder="Miles">
     </div>
-    <button @click="calcSpeed()">
+    <button @click="calcSpeed" >
       OK
     </button>
     <div class="speed">
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="speedList">
-    <i class="fi-rr-document " @click="showModal"></i>
+    <i class="fi-rr-document " @click="showModal" v></i>
     <span class="span-speed-list">Speed <br> list</span>
   </div>
 
