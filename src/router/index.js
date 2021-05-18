@@ -3,31 +3,31 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: '/#/',
+    path: '/',
     name: 'Home',
     meta: {layout:'LayoutWithNavbar'},
     component: Home
   },
   {
-    path: '/#/salary',
+    path: '/salary',
     name: 'Salary',
     meta: {layout:'MainLayout'},
     component: () => import('@/views/Salary')
   },
   {
-    path: '/#/overSpeed',
+    path: '/overSpeed',
     name: 'OverSpeed',
     meta: {layout:'MainLayout'},
     component: () => import('@/views/OverSpeed')
   },
   {
-    path: '/#/speedList',
+    path: '/speedList',
     name: 'SpeedList',
     meta: {layout:'LayoutWithNavbar'},
     component: () => import('@/views/SpeedList')
   },
   {
-    path: '/#/convertingTime',
+    path: '/convertingTime',
     name: 'ConvertingTime',
     meta: {layout:'MainLayout'},
     component: () => import('@/views/СonvertingTime')
