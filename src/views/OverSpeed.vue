@@ -12,12 +12,12 @@
       OK
     </button>
     <div class="speed">
-     <span v-if="timeHours > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' + speed}}</span>
+     <span v-if="miles > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' + speed}}</span>
     </div>
   </div>
   <div class="speedList">
-    <i class="fi-rr-document " @click="showModal" v></i>
-    <span class="span-speed-list">Speed <br> list</span>
+
+    <i class="fi-rr-document" @click="showModal"></i>
   </div>
 
 
@@ -39,14 +39,18 @@ export default {
     miles: '',
     totalTime: '',
     overSpeed: '',
-
+    speed: '',
   }),
   methods:{
     calcSpeed() {
       this.totalTime = this.timeHours + (this.timeMinutes / 60)
+      // console.log('this.timeHours' + this.totalTime)
       this.speed = this.miles / this.totalTime
+      // console.log('this.miles' + this.speed)
       this.overSpeed = Number(this.speed)
-      this.speed = this.speed.toFixed(2) + ' mph'
+      // console.log('this.overSpeed' + this.overSpeed)
+      return  this.speed = this.speed.toFixed(2) + ' mph'
+      // console.log( 'this.speed' + this.speed)
     },
     showModal(){
       return this.$refs.modal.show = true
