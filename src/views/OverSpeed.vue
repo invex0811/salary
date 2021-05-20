@@ -17,7 +17,7 @@
   </div>
   <div class="speedList">
 
-    <i class="fi-rr-document" @click="showModal"></i>
+    <i class="fi-rr-document" @click="showModal" title="Speed list"></i>
   </div>
 
 
