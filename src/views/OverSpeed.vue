@@ -12,7 +12,7 @@
       OK
     </button>
     <div class="speed">
-     <span v-if="miles > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' + speed}}</span>
+     <span v-if="miles > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' +speed}}</span>
     </div>
   </div>
   <div class="speedList">
