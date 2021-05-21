@@ -10,18 +10,19 @@
         <div class="table-wrapper">
           <table>
             <thead>
-              <th>Abbreviation</th>
-              <th>State</th>
+              <th>Abbr</th>
+              <th class="state">State</th>
               <th>Speed</th>
             </thead>
             <tbody>
               <tr v-for="s in todosByTitle" :key="s.id">
-                <td>{{ s.abbr }}</td>
+                <td class="td-abbr">{{ s.abbr }}</td>
                 <td>{{ s.state }}</td>
                 <td>{{ s.speed }}</td>
               </tr>
             </tbody>
           </table>
+
         </div>
    </div>
   </div>
@@ -123,16 +124,21 @@ export default {
   height: 65%;
   overflow-y:scroll;
 }
+table{
+  padding: 0 10px;
+}
 thead{
   font-size: 20px;
 }
 tbody{
   font-size: 18px;
 }
-
 td,th {
-  padding: 0 20px;
   text-align: left;
+  padding: 0 10px;
+}
+.state{
+  width: 150px;
 }
 .search-input{
   margin: 20px;

@@ -8,16 +8,16 @@
     <div class="mile">
       <input type="number" id="mile" v-model.number="miles" placeholder="Miles">
     </div>
-    <button @click="calcSpeed" >
+    <button @click="calcSpeed">
       OK
     </button>
     <div class="speed">
-     <span v-if="miles > 0" :class="{'redSpeed' : overSpeed > 95}">{{'Speed: ' +speed}}</span>
+     <span v-if="miles > 0"  :class="{'redSpeed' : overSpeed > 95}">{{ 'Speed: ' + speed }}</span>
     </div>
   </div>
   <div class="speedList">
 
-    <i class="fi-rr-document" @click="showModal" title="Speed list"></i>
+    <i class="fi-rr-document" @click="showModal" title="Speed list" ></i>
   </div>
 
 
@@ -33,14 +33,16 @@ import SpeedList from "@/views/SpeedList";
 export default {
   name: "OverSpeed",
   components: {SpeedList},
-  data: () => ({
-    timeHours: '',
-    timeMinutes: '',
-    miles: '',
-    totalTime: '',
-    overSpeed: '',
-    speed: '',
-  }),
+  data() {
+    return{
+      timeHours: '',
+      timeMinutes: '',
+      miles: '',
+      totalTime: '',
+      overSpeed: '',
+      speed: '',
+    }
+  },
   methods:{
     calcSpeed() {
       this.totalTime = this.timeHours + (this.timeMinutes / 60)
@@ -49,8 +51,9 @@ export default {
       // console.log('this.miles' + this.speed)
       this.overSpeed = Number(this.speed)
       // console.log('this.overSpeed' + this.overSpeed)
-      return  this.speed = this.speed.toFixed(2) + ' mph'
+      this.speed = this.speed.toFixed(2) + ' mph'
       // console.log( 'this.speed' + this.speed)
+
     },
     showModal(){
       return this.$refs.modal.show = true
