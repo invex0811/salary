@@ -1,5 +1,5 @@
 <template>
-  <transition name="slide-fade">
+  <transition name="fade">
   <div class="wrap-blur-modal" v-if="show" key="modalWindow">
     <div class="wrap-modal">
       <i @click="closeModal" class="fi-rr-cross-circle"></i>
@@ -189,14 +189,11 @@ td,th {
 }
 
 /*modal animation*/
-.slide-fade-enter-active {
-  transition: all .1s ease;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
 }
-.slide-fade-leave-active {
-  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active до версии 2.1.8 */ {
+
+.fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
 </style>

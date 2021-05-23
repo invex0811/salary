@@ -7,12 +7,16 @@
     </div>
     <div class="mile">
       <input type="number" id="mile" v-model.number="miles" placeholder="Miles">
+      <span v-if="checkSecondMiles"> - <input  type="number" id="secondMile" v-model.number="secondMiles" placeholder="Miles"></span>
+    </div>
+    <div class="wrap-checkbox">
+      <label for="checkSecondMiles"><input id="checkSecondMiles" type="checkbox" v-model="checkSecondMiles">2 miles</label>
     </div>
     <button @click="calcSpeed">
       OK
     </button>
     <div class="speed">
-     <span v-if="miles > 0"  :class="{'redSpeed' : overSpeed > 95}">{{ 'Speed: ' + speed }}</span>
+     <span :class="{'redSpeed' : redSpeed > 95}">{{  inputValue }}</span>
     </div>
   </div>
   <div class="speedList">
@@ -20,10 +24,7 @@
     <i class="fi-rr-document" @click="showModal" title="Speed list" ></i>
   </div>
 
-
-      <SpeedList ref="modal"/>
-
-
+  <SpeedList ref="modal"/>
   <router-view/>
 </template>
 
@@ -38,22 +39,28 @@ export default {
       timeHours: '',
       timeMinutes: '',
       miles: '',
-      totalTime: '',
+      secondMiles:'',
+      timeToTenth: '',
       overSpeed: '',
-      speed: '',
+      inputValue: '',
+      redSpeed: '',
+      checkSecondMiles: false,
     }
   },
   methods:{
     calcSpeed() {
-      this.totalTime = this.timeHours + (this.timeMinutes / 60)
-      // console.log('this.timeHours' + this.totalTime)
-      this.speed = this.miles / this.totalTime
-      // console.log('this.miles' + this.speed)
-      this.overSpeed = Number(this.speed)
-      // console.log('this.overSpeed' + this.overSpeed)
-      this.speed = this.speed.toFixed(2) + ' mph'
-      // console.log( 'this.speed' + this.speed)
-
+      this.timeToTenth = this.timeHours + (this.timeMinutes / 60)
+      if (this.timeHours || this.timeMinutes ? 0 : 1 === 0)
+        this.inputValue = "Input all values"
+      else if (this.miles <= 0)
+        this.inputValue = "Input all values"
+      else
+      if (this.checkSecondMiles === false)
+        this.inputValue = this.miles / this.timeToTenth
+      else
+        this.inputValue = (this.miles - this.secondMiles ) / this.timeToTenth
+      this.redSpeed = this.inputValue
+      this.inputValue = 'Speed: ' + this.inputValue.toFixed(2)
     },
     showModal(){
       return this.$refs.modal.show = true
