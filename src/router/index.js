@@ -31,6 +31,18 @@ const routes = [
     name: 'ConvertingTime',
     meta: {layout:'MainLayout'},
     component: () => import('@/views/СonvertingTime')
+  },
+  {
+    path: '/plusTime',
+    name: 'PlusTime',
+    meta: {layout:'MainLayout'},
+    component: () => import('@/views/PlusTime')
+  },
+  {
+    path: '/phrasesPage',
+    name: 'PhrasesPage',
+    meta: {layout:'MainLayout'},
+    component: () => import('@/views/PhrasesPage')
   }
 
 ]

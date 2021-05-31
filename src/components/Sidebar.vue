@@ -25,6 +25,9 @@ export default {
       {img: 'fi-rr-dollar', url: '/salary'},
       {img: 'fi-rr-dashboard', url: '/overSpeed'},
       {img: 'fi-rr-time-forward-ten', url: '/convertingTime'},
+      // {img: 'fi-rr-time-add', url: '/plusTime'},
+      {img: 'fi-rr-text', url: '/phrasesPage'},
+
     ]
   })
 }

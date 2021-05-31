@@ -22,7 +22,6 @@
               </tr>
             </tbody>
           </table>
-
         </div>
    </div>
   </div>
@@ -68,7 +67,7 @@ export default {
         {abbr: 'MT', state: 'Montana', speed: '80mph'},
         {abbr: 'NE', state: 'Nebraska', speed: '90mph'},
         {abbr: 'NV', state: 'Nevada', speed: '95mph'},
-        {abbr: 'NV', state: 'New Hampshire', speed: '85mph'},
+        {abbr: 'NH', state: 'New Hampshire', speed: '85mph'},
         {abbr: 'NJ', state: 'New Jersey', speed: '80mph'},
         {abbr: 'NM', state: 'New Mexico', speed: '90mph'},
         {abbr: 'NY', state: 'New York', speed: '80mph'},

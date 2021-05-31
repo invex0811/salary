@@ -26,6 +26,7 @@ export default {
       {img: 'fi-rr-dollar', title: 'Salary', url: '/salary'},
       {img: 'fi-rr-dashboard', title: 'Over speed', url: '/overSpeed'},
       {img: 'fi-rr-time-forward-ten', title: 'Converting time', url: '/convertingTime'},
+      {img: 'fi-rr-text',title: 'Phrases', url: '/phrasesPage'},
     ]
   })
 }
