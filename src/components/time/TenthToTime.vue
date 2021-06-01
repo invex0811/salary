@@ -1,7 +1,7 @@
 <template>
   <div class="tenthToTime">
       <h3>Tenth to time</h3>
-      <input type="number" v-model.number="a" placeholder="Number"/>
+      <input @keyup.enter='plusDec' type="number" v-model.number="a" placeholder="Number"/>
       <button @click='plusDec'>OK</button>
       <span>{{ answer }}</span>
   </div>

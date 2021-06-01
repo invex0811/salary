@@ -2,11 +2,11 @@
   <div class="over-speed">
     <h2>Over speed</h2>
     <div class="time">
-      <input type="number" v-model.number="timeHours" placeholder="Hours"><b style="font-size: 30px;">:</b>
-      <input type="number" v-model.number="timeMinutes" placeholder="Minutes">
+      <input @keyup="calcSpeed" type="number" v-model.number="timeHours" placeholder="Hours"><b style="font-size: 30px;">:</b>
+      <input @keyup="calcSpeed" type="number" v-model.number="timeMinutes" placeholder="Minutes">
     </div>
     <div class="mile">
-      <input type="number" id="mile" v-model.number="miles" placeholder="Miles">
+      <input @keyup="calcSpeed" type="number" id="mile" v-model.number="miles" placeholder="Miles">
       <span v-if="checkSecondMiles"> - <input  type="number" id="secondMile" v-model.number="secondMiles" placeholder="Miles"></span>
     </div>
     <div class="wrap-checkbox">

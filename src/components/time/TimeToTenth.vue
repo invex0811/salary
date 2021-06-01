@@ -2,9 +2,9 @@
   <div class="timeToTenth">
     <h3>Time to tenth</h3>
     <div class="wrapperInput">
-      <input type="number" v-model.number="hours" placeholder="Hours"/>
+      <input @keyup.enter='convertToTime' type="number" v-model.number="hours" placeholder="Hours"/>
       <b style="font-size: 30px;">:</b>
-      <input type="number" v-model.number="minutes" placeholder="Minutes"/>
+      <input @keyup.enter='convertToTime' type="number" v-model.number="minutes" placeholder="Minutes"/>
     </div>
     <button @click='convertToTime'>OK</button>
     <span>{{ answer }}</span>

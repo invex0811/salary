@@ -64,7 +64,7 @@ button{
   border: none;
   background: #c7c7c7;
   border-radius: 23px;
-  margin: 5px 0;
+  margin: 5px;
   outline: none;
 }
 button:hover{

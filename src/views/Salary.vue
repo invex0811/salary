@@ -2,8 +2,8 @@
   <h2 class="main-heading">Salary calculator</h2>
   <div id="wrapApp" class="page">
     <div class="input-wrap">
-      <input type="number" v-model.number='time' placeholder="Time">
-      <input type="number" v-model.number='rate' placeholder="Rate">
+      <input @keyup.enter="calcMoney" type="number" v-model.number='time' placeholder="Time">
+      <input @keyup.enter="calcMoney" type="number" v-model.number='rate' placeholder="Rate">
       <input type="number" v-model.number='bonus' placeholder="Bonus" v-if="bonusCheck">
       <input type="number" v-model.number="dollarRate" placeholder="Dollar rate" v-if="taxFivePercentCheck">
     </div>
@@ -14,17 +14,43 @@
       <label for="tax5" title="Налог 5%">Tax 5% and salary UAH:<input  id="tax5" type="checkbox" v-model="taxFivePercentCheck"></label>
     </div>
 
-    <button v-on:click='calcMoney()'>OK</button>
+    <button @click='calcMoney'>OK</button>
 
     <div class="output-wrap" v-if="totalCalc > 0">
-      <span>Time: {{ time }}</span>
-      <span>Over time: {{ overTime }}</span>
-      <span>Rate: {{ rate }}</span>
-      <span v-if="time > 160">Over rate: {{ overRate }}</span>
-      <span v-if="bonusCheck">Bonus: {{ bonus }}</span>
-      <span>Money: {{ '$ ' + totalCalc }}</span>
-      <span v-if="taxFivePercentCheck">Tax 5%: {{taxFivePercentCalc.toFixed(2)}}</span>
-      <span v-if="taxFivePercentCheck">Salary UAH: {{calcSalaryUAH}}</span>
+      <table>
+        <tr>
+          <td>Time:</td>
+          <td>{{ time }}</td>
+        </tr>
+        <tr v-if="time > 160">
+          <td >Over time:</td>
+          <td>{{ overTime }}</td>
+        </tr>
+        <tr>
+          <td>Rate:</td>
+          <td>{{ rate }}</td>
+        </tr>
+        <tr v-if="time > 160">
+          <td>Over rate:</td>
+          <td>{{ overRate }}</td>
+        </tr>
+        <tr v-if="bonusCheck">
+          <td>Bonus:</td>
+          <td>{{ bonus }}</td>
+        </tr>
+        <tr>
+          <td>Money:</td>
+          <td>{{ '$ ' + totalCalc }}</td>
+        </tr>
+        <tr v-if="taxFivePercentCheck">
+          <td>Tax 5%:</td>
+          <td>{{taxFivePercentCalc.toFixed(2)}}</td>
+        </tr>
+        <tr v-if="taxFivePercentCheck">
+          <td>Salary UAH:</td>
+          <td>{{calcSalaryUAH}}</td>
+        </tr>
+      </table>
     </div>
 
 
@@ -143,5 +169,8 @@ label{
   flex-direction: column;
   align-items: center;
   font-size: 24px;
+}
+td{
+  padding: 0 10px;
 }
 </style>
