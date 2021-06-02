@@ -21,12 +21,6 @@ const routes = [
     component: () => import('@/views/OverSpeed')
   },
   {
-    path: '/speedList',
-    name: 'SpeedList',
-    meta: {layout:'LayoutWithNavbar'},
-    component: () => import('@/views/SpeedList')
-  },
-  {
     path: '/convertingTime',
     name: 'ConvertingTime',
     meta: {layout:'MainLayout'},

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import SpeedList from "@/views/SpeedList";
+import SpeedList from "@/components/SpeedList";
 
 export default {
   name: "OverSpeed",

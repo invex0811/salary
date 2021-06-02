@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .navbar{
-  background: #790e8b;
+  background: linear-gradient(180deg, #790e8b 60%, rgba(224, 224, 224, .5) );
   height: 50px;
   text-align: center;
 

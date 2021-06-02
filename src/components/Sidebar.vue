@@ -9,7 +9,11 @@
           :to="link.url"
           :exact="link.exact"
       >
-        <i :class="link.img"></i>
+        <div class="wrap-toogl">
+          <i :class="link.img"></i>
+<!--          <span v-if="showToogl" class="title">{{link.title}}</span>-->
+        </div>
+
       </router-link>
     </div>
   </div>
@@ -20,14 +24,23 @@
 export default {
   name: "Sidebar",
   data: () => ({
+    // links: [
+    //   // {img: 'fi-rr-home', url: '/'},
+    //   {img: 'fi-rr-dollar', url: '/salary'},
+    //   {img: 'fi-rr-dashboard', url: '/overSpeed'},
+    //   {img: 'fi-rr-time-forward-ten', url: '/convertingTime'},
+    //   {img: 'fi-rr-time-add', url: '/plusTime'},
+    //   {img: 'fi-rr-text', url: '/phrasesPage'},
+    //
+    //
+    // ]
+    showToogl: false,
     links: [
-      // {img: 'fi-rr-home', url: '/'},
-      {img: 'fi-rr-dollar', url: '/salary'},
-      {img: 'fi-rr-dashboard', url: '/overSpeed'},
-      {img: 'fi-rr-time-forward-ten', url: '/convertingTime'},
-      // {img: 'fi-rr-time-add', url: '/plusTime'},
-      {img: 'fi-rr-text', url: '/phrasesPage'},
-
+      {img: 'fi-rr-dollar', title: 'Salary', url: '/salary'},
+      {img: 'fi-rr-dashboard', title: 'Over speed', url: '/overSpeed'},
+      {img: 'fi-rr-time-forward-ten', title: 'Converting time', url: '/convertingTime'},
+      {img: 'fi-rr-time-add', title: 'Plus time' , url: '/plusTime'},
+      {img: 'fi-rr-text',title: 'Phrases', url: '/phrasesPage'},
     ]
   })
 }
@@ -37,8 +50,10 @@ export default {
 .sidebar{
   position: absolute;
   width: 50px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .link{
   display: flex;
@@ -46,10 +61,11 @@ export default {
   text-align: center;
   justify-content: center;
   background-color: #fff;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 10px 10px 0;
   margin: 10px 0 10px 0;
   font-size: 2vw;
   height: 50px;
+  padding: 0 5px;
   transition: .1s;
 }
 .link:hover{
@@ -62,6 +78,14 @@ a{
 }
 a:active{
   color: #c158dc;
+}
+.wrap-toogl{
+  display: flex;
+  align-items: center;
+}
+.title{
+  position: absolute;
+  font-size: 1vw;
 }
 i{
   margin-bottom: -5px;

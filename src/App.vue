@@ -40,7 +40,7 @@ input[type="number"], input[type="text"]{
   border: none;
   background: #FFFFFF;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 23px;
+  border-radius: 10px;
   font-size: 24px;
   padding-left: 20px;
   margin: 5px;
@@ -63,12 +63,12 @@ button{
   cursor: pointer;
   border: none;
   background: #c7c7c7;
-  border-radius: 23px;
-  margin: 5px;
+  border-radius: 10px;
+  margin: 10px 0;
   outline: none;
 }
 button:hover{
-  background-color:  #c158dc;
+  background:  linear-gradient(0deg, rgba(193,88,220, 1) , rgba(224, 224, 224, .5) );
   transition: .5s;
   color: #fff;
 }

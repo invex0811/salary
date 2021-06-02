@@ -1,25 +1,28 @@
 <template>
   <div class="wrap-plusTime">
     <h2>Plus time</h2>
-    <div class="wrap-navigation">
-      <input type="number" v-model.number="hours" placeholder="Hours"> :
-      <input type="number" v-model.number="minutes" placeholder="Minutes">
-      <button class="wrap-button" @click="addTime">
-        +
-      </button>
+    <div class="wrap-input">
+      <input @keyup.enter="calculateTime" type="number" v-model.number='hours' placeholder="Hours">
+      <b style="font-size: 30px;">:</b>
+      <input @keyup.enter="calculateTime" type="number" v-model.number='minutes' placeholder="Minutes" >
     </div>
-    <div class="wrap-list">
-      <ul>
-      <li
-        v-for="view in viewList"
-        :key="view"
-      >
-        {{view}}</li>
-      </ul>
+
+    <button @click='calculateTime'>OK</button>
+    <div class="wrap-result">
+      <ol >
+        <li v-for='(time,id) in timelistView' :key='time.time'>{{time}}
+          <button
+              class="closeBTN"
+              @click="timelistView.splice(id,1),
+              timelist.splice(id,1) "
+          >
+            Delete
+          </button>
+        </li>
+      </ol>
+      <span v-if="times > 0">Total hours: {{calcTotal}}</span>
     </div>
-    <div class="result">
-      {{totalTime}}
-    </div>
+
   </div>
 </template>
 
@@ -27,32 +30,50 @@
 <script>
 export default {
   name: "PlusTime",
-
   data() {
     return {
       hours: '',
-      minutes:'',
-      time: '',
-      listTime:[],
-      totalTime: '',
-      viewList: [],
-      viewTime: ''
+      minutes: '',
+      tenthMinute: '',
+      times: '',
+      timelist: [],
+      timelistView: [],
+      timesView: '',
+      result: '',
+      total: ''
     }
   },
   methods:{
-    addTime() {
-      // this.viewListTime.listHours = this.hours
-      // this.viewListTime.listMinutes = this.minutes
-      this.minutes = this.minutes / 60
-      this.viewTime = this.hours + (this.minutes *  60)
-      this.viewList.push(this.viewTime)
-      this.time = this.hours + this.minutes
-      this.listTime.push(this.time)
+    calculateTime(){
+      if (this.minutes <= 0){
+        this.timesView = this.hours + 'h'
+        this.times  = this.hours
+      }else if (this.hours <= 0){
+        this.timesView = '0h : '+ this.minutes + 'm'
+        this.times  = this.minutes / 60
+      }else {
+        this.timesView = this.hours + 'h' + ' : ' + this.minutes + 'm'
+        this.times  = this.hours + (this.minutes / 60)
+      }
+      this.timelistView.push(this.timesView)
+      this.timelist.push(this.times)
 
-      this.totalTime = this.listTime.reduce( (a,b) => a +b )
-      return  this.time = ''
+      // this.total = this.timelist.reduce(function (a, b) {
+      //   return a + b
+      // }, 0)
+      // this.total = this.timelist.reduce((a,b) => a + b)
+      // console.log(this.total)
+      // this.result = Math.trunc(this.total) + ':' + Math.trunc(((this.total % 1) * 60))
+    },
+  },
+  computed:{
+    calcList(){
+      return this.timelist.reduce((a,b) => a + b)
+    },
+    calcTotal(){
+      return Math.trunc(this.calcList) + ':' + Math.trunc(((this.calcList % 1) * 60))
     }
-  }
+  },
 
 }
 
@@ -64,13 +85,26 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-  .wrap-navigation{
-    display: flex;
-    align-items: center;
+  input{
+    width: 100px;
   }
-  .wrap-button{
-    width: 46px;
-    font-size: 20px;
+  .closeBTN{
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
   }
-
+  .closeBTN:hover{
+    background: #9e0101;
+  }
+  .wrap-result{
+    font-size: 1vw;
+  }
+  ol {
+    list-style-type: none; /* Убираем исходные маркеры */
+    counter-reset:  item; /* Обнуляем счетчик списка */
+  }
+  li:before {
+    content: counter(item) ') '; /* Добавляем к числам скобку */
+    counter-increment: item; /* Задаём имя счетчика */
+  }
 </style>

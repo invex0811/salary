@@ -62,10 +62,10 @@ export default {
   justify-content: center;
 }
 .button-left{
-  border-radius: 23px 0 0 23px;
+  border-radius: 10px 0 0 10px;
 }
 .button-right{
-  border-radius: 0 23px 23px 0;
+  border-radius: 0 10px 10px 0;
 }
 .active{
   background-color:  #c158dc;

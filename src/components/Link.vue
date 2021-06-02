@@ -26,6 +26,7 @@ export default {
       {img: 'fi-rr-dollar', title: 'Salary', url: '/salary'},
       {img: 'fi-rr-dashboard', title: 'Over speed', url: '/overSpeed'},
       {img: 'fi-rr-time-forward-ten', title: 'Converting time', url: '/convertingTime'},
+      {img: 'fi-rr-time-add', title: 'Plus time' , url: '/plusTime'},
       {img: 'fi-rr-text',title: 'Phrases', url: '/phrasesPage'},
     ]
   })
@@ -49,7 +50,7 @@ export default {
   background-color: #fff;
   width: 300px;
   height: 150px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 5px;
   justify-content: center;
   font-size: 2vw;
