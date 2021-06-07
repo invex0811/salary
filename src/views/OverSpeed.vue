@@ -50,17 +50,20 @@ export default {
   methods:{
     calcSpeed() {
       this.timeToTenth = this.timeHours + (this.timeMinutes / 60)
-      if (this.timeHours || this.timeMinutes ? 0 : 1 === 0)
-        this.inputValue = "Input all values"
+      if (this.timeHours || this.miles ? 0 : 1 === 1)
+        this.inputValue = "Enter all values"
+      else if (this.timeHours || this.timeMinutes ? 0 : 1 === 1)
+        this.inputValue = "Enter time"
       else if (this.miles <= 0)
-        this.inputValue = "Input all values"
+        this.inputValue = "Enter miles"
+
       else
-      if (this.checkSecondMiles === false)
-        this.inputValue = this.miles / this.timeToTenth
-      else
-        this.inputValue = (this.miles - this.secondMiles ) / this.timeToTenth
-      this.redSpeed = this.inputValue
-      this.inputValue = 'Speed: ' + this.inputValue.toFixed(2)
+        if (this.checkSecondMiles === false)
+          this.inputValue = this.miles / this.timeToTenth
+        else
+          this.inputValue = (this.miles - this.secondMiles ) / this.timeToTenth
+        this.redSpeed = this.inputValue
+        this.inputValue = 'Speed: ' + this.inputValue.toFixed(2)
     },
     showModal(){
       return this.$refs.modal.show = true

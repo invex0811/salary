@@ -1,18 +1,18 @@
 <template>
   <transition name="fade">
-  <div class="wrap-blur-modal" v-if="show" key="modalWindow">
-    <div class="wrap-modal">
-      <i @click="closeModal" class="fi-rr-cross-circle"></i>
-      <div class="input-wrapper">
-        <input type="text" class="search-input" v-model="search" placeholder="Input abbreviation">
-      </div>
+    <div class="wrap-modal" v-if="show">
+      <div class="wrap-blur-modal"  key="modalWindow" @click="show = false"></div>
       <div class="speedList" >
+        <i @click="closeModal" class="fi-rr-cross-circle"></i>
+        <div class="input-wrapper">
+          <input type="text" class="search-input" v-model="search" placeholder="Input abbreviation">
+        </div>
         <div class="table-wrapper">
           <table>
             <thead>
-              <th>Abbr</th>
-              <th class="state">State</th>
-              <th>Speed</th>
+            <th class="abbrTH">Abbr</th>
+            <th class="stateTH">State</th>
+            <th class="speedTH">Speed</th>
             </thead>
             <tbody>
               <tr v-for="s in todosByTitle" :key="s.id">
@@ -23,9 +23,8 @@
             </tbody>
           </table>
         </div>
-   </div>
-  </div>
-  </div>
+      </div>
+    </div>
   </transition>
   <router-view/>
 
@@ -108,17 +107,41 @@ export default {
 
 <style scoped>
 
-.input-wrapper{
-  text-align: center;
+
+.wrap-blur-modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+}
+.wrap-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 .speedList{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 80%;
+  width: 50%;
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  border: 3px solid #790e8b;
+  border-radius: 50px;
+  position: absolute;
+}
+.input-wrapper{
+  text-align: center;
 }
 .table-wrapper{
-  position: fixed;
-  height: 65%;
+  height: 80%;
   overflow-y:scroll;
 }
 table{
@@ -126,40 +149,28 @@ table{
 }
 thead{
   font-size: 20px;
+
 }
 tbody{
+  margin-top: 30px;
   font-size: 18px;
 }
 td,th {
   text-align: left;
   padding: 0 10px;
 }
-.state{
-  width: 150px;
+th{
+  text-align: left;
+  padding-right: 10px;
+}
+
+.stateTH{
+  width: 140px;
 }
 .search-input{
   margin: 20px;
 }
-.wrap-blur-modal{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, .5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.wrap-modal {
-  background-color: #e0e0e0;
-  padding: 10px 20px;
-  height: 80%;
-  width: 50%;
-  position: relative;
-  border: 3px solid #790e8b;
-  border-radius: 50px;
-}
+
 .fi-rr-cross-circle{
   position: absolute;
   right: 30px;
