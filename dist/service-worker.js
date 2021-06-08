@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/salary/precache-manifest.ce3cf858cb96c9ce3a3e68f679119fce.js"
+  "/salary/precache-manifest.387fec266bdabf790fe7eed9175aabd7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "salary"});

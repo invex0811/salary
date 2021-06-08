@@ -56,7 +56,7 @@ input::-webkit-inner-spin-button {
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 button{
-  width: 286px;
+  width: 280px;
   height: 46px;
   font-size: 18px;
   line-height: 46px;

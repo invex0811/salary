@@ -12,16 +12,18 @@
     <div class="wrap-checkbox">
       <label for="checkSecondMiles"><input id="checkSecondMiles" type="checkbox" v-model="checkSecondMiles">2 miles</label>
     </div>
-    <button @click="calcSpeed">
-      OK
-    </button>
+    <div class="wrap-button">
+      <button class="calc-speed_btn" @click="calcSpeed">
+        OK
+      </button>
+      <button class="speedList" title="Speed list">
+        <i class="fi-rr-document" @click="showModal" title="Speed list" ></i>
+      </button>
+    </div>
+
     <div class="speed">
      <span :class="{'redSpeed' : redSpeed > 95}">{{  inputValue }}</span>
     </div>
-  </div>
-  <div class="speedList">
-
-    <i class="fi-rr-document" @click="showModal" title="Speed list" ></i>
   </div>
 
   <SpeedList ref="modal"/>
@@ -98,10 +100,11 @@ span{
 .redSpeed{
   color: red;
 }
+.wrap-button{
+  display: flex;
+}
 .speedList{
-  position: absolute;
-  right: 20px;
-  top: 70px;
+  width: 50px;
   font-size: 30px;
   text-decoration: none;
   cursor: pointer;
@@ -109,8 +112,12 @@ span{
   text-align: center;
 }
 .speedList:hover{
-  color: #c158dc;
+  color: #fff;
   transition: .3s;
+}
+.calc-speed_btn{
+  width: 200px;
+  margin-right: 10px;
 }
 .speed{
   margin-top: 20px;
