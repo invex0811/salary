@@ -10,13 +10,20 @@
 </template>
 
 <script>
+// import moment from "moment";
 export default {
   name: "Navbar",
-  data: () => ({
-    url: '/'
-  })
-
-
+  data() {
+    return {
+      url: '/',
+      today: '',
+    }
+  },
+  computed:{
+    // calcGapDate(){
+    //   // return (this.today.subtract(10,'days')   )
+    // }
+  }
 }
 </script>
 

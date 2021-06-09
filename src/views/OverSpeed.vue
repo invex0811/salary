@@ -2,24 +2,36 @@
   <div class="over-speed">
     <h2>Over speed</h2>
     <div class="time">
-      <input @keyup="calcSpeed" type="number" v-model.number="timeHours" placeholder="Hours"><b style="font-size: 30px;">:</b>
+      <input @keyup="calcSpeed" type="number" v-model.number="timeHours" placeholder="Hours">
+      <b style="font-size: 30px;">:</b>
       <input @keyup="calcSpeed" type="number" v-model.number="timeMinutes" placeholder="Minutes">
     </div>
+
+
     <div class="mile">
       <input @keyup="calcSpeed" type="number" id="mile" v-model.number="miles" placeholder="Miles">
-      <span v-if="checkSecondMiles"> - <input  type="number" id="secondMile" v-model.number="secondMiles" placeholder="Miles"></span>
+      <span v-if="checkSecondMiles"><b style="font-size: 30px;">-</b><input  type="number" id="secondMile" v-model.number="secondMiles" placeholder="Miles"></span>
     </div>
-    <div class="wrap-checkbox">
-      <label for="checkSecondMiles"><input id="checkSecondMiles" type="checkbox" v-model="checkSecondMiles">2 miles</label>
-    </div>
+<!--    <div class="wrap-checkbox">-->
+<!--      <label for="checkSecondMiles"><input id="checkSecondMiles" type="checkbox" v-model="checkSecondMiles">2 miles</label>-->
+<!--    </div>-->
+    <label class="label wrap-checkbox" for="checkSecondMiles">
+      <div class="toggle">
+        <input class="toggle-state" type="checkbox" value="check" id="checkSecondMiles" v-model="checkSecondMiles"/>
+        <div class="indicator"></div>
+      </div>
+      <div class="label-text">2 miles</div>
+    </label>
+
     <div class="wrap-button">
       <button class="calc-speed_btn" @click="calcSpeed">
         OK
       </button>
-      <button class="speedList" title="Speed list">
-        <i class="fi-rr-document" @click="showModal" title="Speed list" ></i>
+      <button class="speedList" @click="showModal" title="Speed list">
+        <i class="fi-rr-document"  title="Speed list" ></i>
       </button>
     </div>
+
 
     <div class="speed">
      <span :class="{'redSpeed' : redSpeed > 95}">{{  inputValue }}</span>
@@ -102,6 +114,9 @@ span{
 }
 .wrap-button{
   display: flex;
+}
+.wrap-checkbox{
+  margin-top: 10px;
 }
 .speedList{
   width: 50px;

@@ -1,5 +1,8 @@
 <template>
-  <transition name="fade">
+  <transition
+      enter-active-class="animate__animated animate__fadeIn"
+      leave-active-class="animate__animated animate__fadeOut"
+  >
     <div class="wrap-modal" v-if="show">
       <div class="wrap-blur-modal"  key="modalWindow" @click="show = false"></div>
       <div class="speedList" >
@@ -196,12 +199,4 @@ th{
   background-color: #790e8b;
 }
 
-/*modal animation*/
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
 </style>

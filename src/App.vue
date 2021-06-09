@@ -30,6 +30,7 @@ body{
   box-sizing: border-box;
   margin: 0;
   background: #e0e0e0;
+  overflow: hidden;
 }
 h2{
   font-size: 40px;
@@ -68,11 +69,52 @@ button{
   outline: none;
 }
 button:hover{
-  background:  linear-gradient(0deg, rgba(193,88,220, 1) , rgba(224, 224, 224, .5) );
-  transition: .5s;
+  background-color: #c158dc;
+  transition: .3s;
   color: #fff;
 }
 button:focus{
-  box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #c158dc;
 }
+
+/*toggle checkbox*/
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label-text {
+  margin-left: 5px;
+}
+
+.toggle {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(167, 103, 198, .4);
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #c7c7c7;
+  border-radius: 5px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+  background-color: #c158dc;
+}
+
+/*end*/
 </style>
