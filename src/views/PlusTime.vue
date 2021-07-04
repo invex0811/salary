@@ -24,9 +24,10 @@
     </div>
 
   </div>
+  <router-view/>
 </template>
 
-  <router-view/>
+
 <script>
 export default {
   name: "PlusTime",

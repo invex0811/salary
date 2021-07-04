@@ -6,6 +6,7 @@
       <p>Taken from: <a target="_blank" href="https://docs.google.com/document/d/13uRnmEr3e5_itPvrjIN4eZXV261LpUNfFIuDL4H4Fto/edit">Phrases monitoring</a></p>
     </div>
   </div>
+  <router-view/>
 </template>
 
 <script>

@@ -37,6 +37,12 @@ const routes = [
     name: 'PhrasesPage',
     meta: {layout:'MainLayout'},
     component: () => import('@/views/PhrasesPage')
+  },
+  {
+    path: '/testMoneyCalc',
+    name: 'TestMoneyCalc',
+    meta: {layout:'MainLayout'},
+    component: () => import('@/views/TestMoneyCalc')
   }
 
 ]

@@ -41,6 +41,7 @@ export default {
       {img: 'fi-rr-time-forward-ten', title: 'Converting time', url: '/convertingTime'},
       {img: 'fi-rr-time-add', title: 'Plus time' , url: '/plusTime'},
       {img: 'fi-rr-text',title: 'Phrases', url: '/phrasesPage'},
+      {img: 'fi-rr-hourglass',title: 'Test', url: '/testMoneyCalc'},
     ]
   })
 }

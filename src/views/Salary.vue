@@ -20,10 +20,6 @@
       </transition>
     </div>
     <div class="checkbox-wrap">
-<!--      <label for="vacation" title="Отпуск 4%">Vacation:<input id="vacation" type="checkbox" v-model="vacation" ></label><div class="vertical-line"></div>-->
-<!--      <label for="tax" title="Налог +45$">Tax:<input id="tax" type="checkbox" v-model="tax" ></label><div class="vertical-line"></div>-->
-<!--      <label for="bonusCheck" title="Премия">Bonus:<input id="bonusCheck" type="checkbox" v-model="bonusCheck"></label><div class="vertical-line"></div>-->
-<!--      <label for="tax5" title="Налог 5%">Tax 5% and salary UAH:<input  id="tax5" type="checkbox" v-model="taxFivePercentCheck"></label>-->
       <label class="label" for="vacation" title="Отпуск 4%">
         <div class="toggle">
           <input class="toggle-state" type="checkbox" name="check" id="vacation" v-model="vacation">
@@ -94,9 +90,6 @@
         </tr>
       </table>
     </div>
-
-
-
   </div>
   <router-view/>
 </template>
