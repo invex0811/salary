@@ -1,6 +1,6 @@
 <template>
 <div class="wrap-page__moneyCalc">
-  <h2>Money calculator</h2>
+  <h2>TEST Money calculator</h2>
   <div class="wrap-input">
     <input type="number" v-model.number="workDay" placeholder="Work day">
     <input type="number" v-model.number="rate" placeholder="Rate">
