@@ -39,10 +39,10 @@ const routes = [
     component: () => import('@/views/PhrasesPage')
   },
   {
-    path: '/testMoneyCalc',
-    name: 'TestMoneyCalc',
+    path: '/mapUSA',
+    name: 'MapUSA',
     meta: {layout:'MainLayout'},
-    component: () => import('@/views/TestMoneyCalc')
+    component: () => import('@/views/MapUSA')
   }
 
 ]
