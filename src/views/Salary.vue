@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="wrap-page__moneyCalc">
     <h2>Salary</h2>
     <div class="wrap-input">
@@ -149,23 +149,29 @@ export default {
       this.rateX2  = this.rate * 2
       this.totalTestPercent = (this.firstTestPercent + this.secondTestPercent) / 2
       this.timeX2Calc = this.timeX2
-
-      if (this.totalTestPercent >= 91){
-        this.hours += 8
-        this.timeTest = 8
-      }else if (this.totalTestPercent >= 81 && this.totalTestPercent <= 90) {
-        this.hours += 6
-        this.timeTest = 6
-      }else if (this.totalTestPercent >= 71 && this.totalTestPercent <= 80) {
-        this.hours += 4
-        this.timeTest = 4
-      }else if (this.totalTestPercent >= 60 && this.totalTestPercent <= 70) {
-        this.hours += 0
-        this.timeTest = 0
-      }else if (this.totalTestPercent < 60) {
-        this.hours -= 4
-        this.timeTest = '-4'
+      try {
+        if (this.totalTestPercent >= 91){
+          this.hours += 8
+          this.timeTest = 8
+        }else if (this.totalTestPercent >= 81 && this.totalTestPercent <= 90) {
+          this.hours += 6
+          this.timeTest = 6
+        }else if (this.totalTestPercent >= 71 && this.totalTestPercent <= 80) {
+          this.hours += 4
+          this.timeTest = 4
+        }else if (this.totalTestPercent >= 60 && this.totalTestPercent <= 70) {
+          this.hours += 0
+          this.timeTest = 0
+        }else if (this.totalTestPercent < 60) {
+          this.hours -= 4
+          this.timeTest = '-4'
+        }
+      } catch {
+            alert(this.workTime)
+            alert(this.hours)
       }
+
+
 
 
       if (this.hours < 176){
