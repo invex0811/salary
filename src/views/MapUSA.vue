@@ -238,7 +238,12 @@ export default {
 
     }
 },
+  methods:{
 
+},
+  computed:{
+
+  }
 
 
 }
@@ -255,6 +260,10 @@ path{
   fill: #c158dc;
   stroke:#ffffff;
   stroke-width: 1;
+}
+path:hover{
+  fill: blue;
+  zoom: 3;
 }
 
 </style>

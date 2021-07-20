@@ -97,7 +97,7 @@
         </tr>
         <tr>
           <td>Money:</td>
-          <td>{{ totalPlus.toFixed(2) + ' $' }}</td>
+          <td>{{totalPlus + ' $' }}</td>
         </tr>
         <tr v-if="checkMoneyRate">
           <td>Tax 5%:</td>
@@ -149,7 +149,7 @@ export default {
       this.rateX2  = this.rate * 2
       this.totalTestPercent = (this.firstTestPercent + this.secondTestPercent) / 2
       this.timeX2Calc = this.timeX2
-      try {
+
         if (this.totalTestPercent >= 91){
           this.hours += 8
           this.timeTest = 8
@@ -166,12 +166,6 @@ export default {
           this.hours -= 4
           this.timeTest = '-4'
         }
-      } catch {
-            alert(this.workTime)
-            alert(this.hours)
-      }
-
-
 
 
       if (this.hours < 176){
@@ -208,7 +202,7 @@ export default {
       return this.moneyBonus * this.checkMoneyBonus
     },
     totalPlus(){
-      return this.total + (this.plusHoursX2 + this.plusTax + this.plusVacation + this.plusMoneyBonus )
+      return Math.floor(this.total + (this.plusHoursX2 + this.plusTax + this.plusVacation + this.plusMoneyBonus ))
     },
     convertMoneyToUAH(){
       return this.totalPlus * this.moneyRate
@@ -225,7 +219,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: red;
 }
 .wrap-input{
   display: flex;
