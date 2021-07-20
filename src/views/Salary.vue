@@ -225,6 +225,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: red;
 }
 .wrap-input{
   display: flex;
