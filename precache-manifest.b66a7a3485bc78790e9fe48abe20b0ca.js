@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48e3cfba9f6781d0ca0a",
-    "url": "/salary/css/app.0678755b.css"
+    "revision": "2b8c80d2078400aff044",
+    "url": "/salary/css/app.1c81957a.css"
   },
   {
     "revision": "7308e8f6baec3d88a86f",
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/css/chunk-77570c67.c4c7e853.css"
   },
   {
-    "revision": "59e0e8858b70ceacc5e3",
-    "url": "/salary/css/chunk-789a3b00.47a9e094.css"
-  },
-  {
     "revision": "ee9c8cf486c658aa6295",
     "url": "/salary/css/chunk-8f42918a.8a6d742d.css"
+  },
+  {
+    "revision": "36ca1cd751f3a9a4b7a6",
+    "url": "/salary/css/chunk-b16d3a34.27ac99b7.css"
   },
   {
     "revision": "395462ab716f6af6172f",
@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/css/chunk-f508fc00.6a5208d8.css"
   },
   {
-    "revision": "2adcb31e86e19f927e8a925fbf0cbb80",
+    "revision": "fccf438d94c31f994bb6a821f578fc4f",
     "url": "/salary/index.html"
   },
   {
-    "revision": "48e3cfba9f6781d0ca0a",
-    "url": "/salary/js/app.fdea48cf.js"
+    "revision": "2b8c80d2078400aff044",
+    "url": "/salary/js/app.309e6cff.js"
   },
   {
     "revision": "7308e8f6baec3d88a86f",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/js/chunk-77570c67.79364968.js"
   },
   {
-    "revision": "59e0e8858b70ceacc5e3",
-    "url": "/salary/js/chunk-789a3b00.f0f382a9.js"
-  },
-  {
     "revision": "ee9c8cf486c658aa6295",
     "url": "/salary/js/chunk-8f42918a.e8d00547.js"
+  },
+  {
+    "revision": "36ca1cd751f3a9a4b7a6",
+    "url": "/salary/js/chunk-b16d3a34.35b1130e.js"
   },
   {
     "revision": "395462ab716f6af6172f",
