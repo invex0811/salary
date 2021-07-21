@@ -1,15 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8b4b8bdb5ef0cead29a",
-    "url": "/salary/css/app.1c81957a.css"
+    "revision": "ed26cf8160fc8a51e4eb",
+    "url": "/salary/css/app.f5e9eb10.css"
   },
   {
-    "revision": "7308e8f6baec3d88a86f",
-    "url": "/salary/css/chunk-3e923e89.a36cdc51.css"
-  },
-  {
-    "revision": "d3edc9c39fc5cfbb01c9",
-    "url": "/salary/css/chunk-59116212.735988c1.css"
+    "revision": "266f1f90cb83ae9cd98d",
+    "url": "/salary/css/chunk-46afaa31.182799a0.css"
   },
   {
     "revision": "1068b08ca89ad5605c79",
@@ -24,6 +20,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/css/chunk-8f42918a.8a6d742d.css"
   },
   {
+    "revision": "17b833009e82db3af049",
+    "url": "/salary/css/chunk-af7fafb8.8ef79bf5.css"
+  },
+  {
     "revision": "395462ab716f6af6172f",
     "url": "/salary/css/chunk-d6949692.f47a6bf0.css"
   },
@@ -32,20 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salary/css/chunk-f508fc00.6a5208d8.css"
   },
   {
-    "revision": "a96afbbc12b35ddb1ef43399d5901d55",
+    "revision": "1a93904dc3722d325d66c54ccd841ac6",
     "url": "/salary/index.html"
   },
   {
-    "revision": "c8b4b8bdb5ef0cead29a",
-    "url": "/salary/js/app.518917b8.js"
+    "revision": "ed26cf8160fc8a51e4eb",
+    "url": "/salary/js/app.6fa974b4.js"
   },
   {
-    "revision": "7308e8f6baec3d88a86f",
-    "url": "/salary/js/chunk-3e923e89.36fb617b.js"
-  },
-  {
-    "revision": "d3edc9c39fc5cfbb01c9",
-    "url": "/salary/js/chunk-59116212.c7b37f6c.js"
+    "revision": "266f1f90cb83ae9cd98d",
+    "url": "/salary/js/chunk-46afaa31.66f86229.js"
   },
   {
     "revision": "1068b08ca89ad5605c79",
@@ -58,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee9c8cf486c658aa6295",
     "url": "/salary/js/chunk-8f42918a.e8d00547.js"
+  },
+  {
+    "revision": "17b833009e82db3af049",
+    "url": "/salary/js/chunk-af7fafb8.86fdd354.js"
   },
   {
     "revision": "395462ab716f6af6172f",
