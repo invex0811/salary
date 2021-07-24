@@ -6,7 +6,13 @@
       <b style="font-size: 30px;">:</b>
       <input @keyup.enter='convertToTime' type="number" v-model.number="minutes" placeholder="Minutes"/>
     </div>
-    <button @click='convertToTime'>OK</button>
+    <v-btn
+      class="btn"
+      color="primary"
+      @click='convertToTime'
+    >
+      OK
+    </v-btn>
     <span>{{ answer }}</span>
   </div>
 </template>

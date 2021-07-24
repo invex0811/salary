@@ -55,7 +55,12 @@
       </label>
     </div>
     <div class="wrap-buttons">
-      <button @click="calcMoney">OK</button>
+      <v-btn
+          class="btn"
+          color="primary"
+          @click="calcMoney">
+        OK
+      </v-btn>
     </div>
     <div class="wrap-info" v-if="workTime>0">
       <table>
@@ -71,7 +76,7 @@
           <td>Bonus time:</td>
           <td>{{ timeX2 }}</td>
         </tr>
-        <tr v-if="checkHoursBonus">
+        <tr>
           <td>Time per test:</td>
           <td>{{ timeTest }}</td>
         </tr>
@@ -170,7 +175,7 @@ export default {
 
       if (this.hours < 176){
         this.hours += this.timeX2Calc
-        this.timeX2Calc = this.hours - 176
+
         if (this.hours > 176){
           this.overTime = this.hours - 176 - this.timeX2Calc
         }
@@ -233,6 +238,9 @@ export default {
 .wrap-info{
   display: flex;
   flex-direction: column;
+}
+td{
+  padding: 0 5px;
 }
 </style>
 

@@ -9,6 +9,7 @@
     "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "animate.css": "^4.1.1",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
@@ -16,13 +17,16 @@
     "hover-effect": "^1.1.0",
     "moment": "^2.29.1",
     "register-service-worker": "^1.7.1",
+    "roboto-fontface": "*",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
-    "vue-style-loader": "^4.1.3"
+    "vue-style-loader": "^4.1.3",
+    "vuetify": "^3.0.0-alpha.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@vue/babel-preset-app": "^4.5.13",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
@@ -37,9 +41,11 @@
     "eslint-plugin-vue": "^7.0.0",
     "execa": "^4.0.0",
     "node-emoji": "^1.10.0",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
     "vue-cli-plugin-axios": "^0.0.4",
     "vue-cli-plugin-gh-pages-auto-deploy": "~0.4.0",
-    "vue-cli-plugin-vuetify": "~2.4.0",
+    "vue-cli-plugin-vuetify": "~2.4.1",
     "webpack": "^4.46.0"
   },
   "eslintConfig": {

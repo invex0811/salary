@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h2>Choose a tools</h2>
-  <Link/>
+    <Link/>
   </div>
   <router-view/>
 </template>
@@ -11,7 +11,7 @@ import Link from "@/components/Link";
 export default {
   name: 'Home',
   components: {Link}
-  }
+}
 </script>
 
 <style scoped>
@@ -19,6 +19,4 @@ export default {
   padding-top: 50px;
   text-align: center;
 }
-
-
 </style>

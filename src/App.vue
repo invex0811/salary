@@ -56,39 +56,18 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
-button{
-  width: 280px;
-  height: 46px;
-  font-size: 18px;
-  line-height: 46px;
-  cursor: pointer;
-  border: none;
-  background: #c7c7c7;
-  border-radius: 10px;
-  margin: 10px 0;
-  outline: none;
+.btn{
+ margin: 10px 5px;
 }
-button:hover{
-  background-color: #c158dc;
-  transition: .3s;
-  color: #fff;
-}
-button:focus{
-  box-shadow: 0 0 5px #c158dc;
-}
-
 /*toggle checkbox*/
-
 .label {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
 }
-
 .label-text {
   margin-left: 5px;
 }
-
 .toggle {
   position: relative;
   height: 20px;
@@ -97,11 +76,9 @@ button:focus{
   overflow: hidden;
   background: rgba(167, 103, 198, .4);
 }
-
 .toggle-state {
   display: none;
 }
-
 .indicator {
   height: 100%;
   width: 200%;
@@ -110,11 +87,9 @@ button:focus{
   transform: translate3d(-75%, 0, 0);
   transition: transform 0.3s cubic-bezier(0.85, 0.05, 0.18, 1.35);
 }
-
 .toggle-state:checked ~ .indicator {
   transform: translate3d(25%, 0, 0);
   background-color: #c158dc;
 }
-
 /*end*/
 </style>

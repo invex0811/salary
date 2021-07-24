@@ -3,20 +3,22 @@
     <h2>Converting time</h2>
     <div class="wrapperTenths" >
       <div class="wrapper_buttons">
-        <button
+        <v-btn
+            color="secondary"
             @click="currentTab = 'TenthToTime'"
             class="button-left buttons"
             :class="{'active': currentTab === 'TenthToTime' }"
         >
           Convert to time
-        </button>
-        <button
+        </v-btn>
+        <v-btn
+            color="secondary"
             @click="currentTab = 'TimeToTenth'"
             class="button-right buttons"
             :class="{'active': currentTab === 'TimeToTenth' }"
         >
           Convert to tenth
-        </button>
+        </v-btn>
       </div>
       <keep-alive>
         <component :is="currentTab" />

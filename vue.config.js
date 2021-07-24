@@ -1,4 +1,7 @@
 module.exports = {
-    publicPath:  '/salary/'
-       
+    publicPath:  '/salary/',
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 }

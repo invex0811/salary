@@ -24,12 +24,22 @@
     </label>
 
     <div class="wrap-button">
-      <button class="calc-speed_btn" @click="calcSpeed">
+      <v-btn
+        class="btn"
+        color="primary"
+        @click="calcSpeed">
         OK
-      </button>
-      <button class="speedList" @click="showModal" title="Speed list">
-        <i class="fi-rr-document"  title="Speed list" ></i>
-      </button>
+      </v-btn>
+      <v-btn
+        class="btn"
+        color="secondary"
+        @click="showModal"
+      >
+        <v-icon>far fa-list-alt</v-icon>
+      </v-btn>
+<!--      <button class="speedList" @click="showModal" title="Speed list">-->
+<!--        <i class="fi-rr-document"  title="Speed list" ></i>-->
+<!--      </button>-->
     </div>
 
 
