@@ -135,9 +135,8 @@ export default {
   height: 80%;
   width: 50%;
   background-color: #e0e0e0;
-  padding: 10px 20px;
   border: 3px solid #790e8b;
-  border-radius: 50px;
+  border-radius: 15px;
   position: absolute;
 }
 .input-wrapper{
@@ -176,8 +175,8 @@ th{
 
 .fi-rr-cross-circle{
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 10px;
+  top: 5px;
   font-size: 30px;
   cursor: pointer;
   color: #790e8b;

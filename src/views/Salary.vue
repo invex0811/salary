@@ -230,7 +230,7 @@ export default {
   flex-direction: column;
 }
 .input-percent{
-  width: 170px;
+  width: 190px;
 }
 .wrap-checkbox{
   margin-top: 8px;

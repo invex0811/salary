@@ -33,6 +33,7 @@ body{
   overflow: hidden;
 }
 h2{
+  margin: 10px 0 20px 0;
   font-size: 40px;
   text-transform: uppercase;
 }

@@ -13,14 +13,17 @@
           <i :class="link.img"></i>
 <!--          <span v-if="showToogl" class="title">{{link.title}}</span>-->
         </div>
-
       </router-link>
+    </div>
+    <div class="date-gap" >
+      Gap date: <br> {{calcGap}}
     </div>
   </div>
 
 </template>
 
 <script>
+import {DateTime} from "luxon";
 export default {
   name: "Sidebar",
   data: () => ({
@@ -43,7 +46,12 @@ export default {
      // {img: 'fi-rr-text',title: 'Phrases', url: '/phrasesPage'},
      //  {img: 'fi-rr-marker',title: 'Map USA', url: '/mapUSA'},
     ]
-  })
+  }),
+  computed:{
+    calcGap(){
+      return DateTime.now().minus({ days: 9 }).toFormat('DD')
+    }
+  }
 }
 </script>
 
@@ -95,5 +103,10 @@ i{
   border-right: 3px solid  #c158dc;
   box-shadow: 0 0 20px rgba(193,88,220,0.5);
   color: #c158dc;
+}
+.date-gap{
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 15px;
 }
 </style>

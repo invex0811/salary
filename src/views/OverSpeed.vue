@@ -105,7 +105,7 @@ export default {
   align-items: center;
 }
 input[type="number"]{
-  width: 100px;
+  width: 120px;
 }
 input:focus{
   box-shadow: 0 0 5px #000;

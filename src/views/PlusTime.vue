@@ -50,7 +50,7 @@
       </ol>
       <span v-if="times > 0">Total hours: {{calcTotal}}</span>
     </div>
-
+    {{calcGap}}
   </div>
   <router-view/>
 </template>
@@ -70,7 +70,7 @@ export default {
       timesView: '',
       result: '',
       total: '',
-      checkStatus: false
+      checkStatus: false,
     }
   },
   methods:{
@@ -91,7 +91,8 @@ export default {
     cleanForms(){
       this.hours = ''
       this.minutes = ''
-    }
+    },
+
   },
   computed:{
     calcList(){
@@ -99,7 +100,9 @@ export default {
     },
     calcTotal(){
       return Math.trunc(this.calcList) + ':' + Math.trunc(((this.calcList % 1) * 60))
-    }
+    },
+
+
   },
 
 }
