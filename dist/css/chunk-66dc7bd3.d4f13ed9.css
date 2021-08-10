@@ -1,0 +1,1 @@
+.wrap-plusTime[data-v-53b0c482]{display:flex;flex-direction:column;align-items:center}.wrap-result[data-v-53b0c482]{font-size:1vw}ol[data-v-53b0c482]{list-style-type:none;counter-reset:item}li[data-v-53b0c482]:before{content:counter(item) ") ";counter-increment:item}

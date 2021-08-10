@@ -20,14 +20,21 @@
           color="primary"
           @click='calculateTime'
       >
-        OK
+        Plus time
       </v-btn>
+<!--      <v-btn-->
+<!--          class="btn"-->
+<!--          color="secondary"-->
+<!--          @click="cleanForms"-->
+<!--      >-->
+<!--        Clean-->
+<!--      </v-btn>-->
       <v-btn
-          class="btn"
-          color="secondary"
-          @click="cleanForms"
+        class="btn"
+        color="#304FFE"
+        @click="goToSalary"
       >
-        Clean
+        Go to salary
       </v-btn>
     </div>
 
@@ -65,8 +72,8 @@ export default {
       minutes: '',
       tenthMinute: '',
       times: '',
-      timelist: [0],
-      timelistView: [0],
+      timelist: [],
+      timelistView: [],
       timesView: '',
       result: '',
       total: '',
@@ -92,6 +99,7 @@ export default {
       this.hours = ''
       this.minutes = ''
     },
+
 
   },
   computed:{

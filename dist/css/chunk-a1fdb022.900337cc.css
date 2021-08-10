@@ -1,1 +1,0 @@
-.wrap-plusTime[data-v-782cab30]{display:flex;flex-direction:column;align-items:center}.wrap-result[data-v-782cab30]{font-size:1vw}ol[data-v-782cab30]{list-style-type:none;counter-reset:item}li[data-v-782cab30]:before{content:counter(item) ") ";counter-increment:item}

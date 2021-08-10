@@ -1,17 +1,17 @@
 <template>
   <div class="all-wrap">
     <div class="link-wrap">
-      <router-link
-          class="link"
-          v-for="link in links"
-          :key="link.url"
-          active-class="active"
-          :to="link.url"
-          :exact="link.exact"
-      >
-        <i :class="link.img"></i>
-        <a href="#" class="link-tool">{{link.title}}</a>
-      </router-link>
+          <router-link
+              class="link"
+              v-for="link in links"
+              :key="link.url"
+              active-class="active"
+              :to="link.url"
+              :exact="link.exact"
+          >
+              <i :class="link.img"></i>
+              <a href="#" class="link-tool">{{link.title}}</a>
+          </router-link>
     </div>
   </div>
 

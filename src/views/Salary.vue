@@ -156,16 +156,16 @@ export default {
       this.timeX2Calc = this.timeX2
 
         if (this.totalTestPercent >= 91){
-          this.hours += 8
+          this.total = 8 * this.rate
           this.timeTest = 8
         }else if (this.totalTestPercent >= 81 && this.totalTestPercent <= 90) {
-          this.hours += 6
+          this.total = 6 * this.rate
           this.timeTest = 6
         }else if (this.totalTestPercent >= 71 && this.totalTestPercent <= 80) {
-          this.hours += 4
+          this.total = 4 * this.rate
           this.timeTest = 4
         }else if (this.totalTestPercent >= 60 && this.totalTestPercent <= 70) {
-          this.hours += 0
+          this.total = 0 * this.rate
           this.timeTest = 0
         }else if (this.totalTestPercent < 60) {
           this.hours -= 4
@@ -189,9 +189,7 @@ export default {
       }else if (this.hours > 176){
         this.total = 176 * this.rate + this.overTime * this.overRate
       }
-
-
-    }
+    },
   },
   computed:{
     plusHoursX2(){
