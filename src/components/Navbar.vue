@@ -1,5 +1,6 @@
 <template>
   <nav class="navbar">
+    <span class="version">alpha 0.7</span>
     <router-link
       tag="a"
       :to='url'
@@ -42,5 +43,9 @@ h1{
 }
 a{
   text-decoration: none;
+}
+.version{
+  position: fixed;
+  left: 0;
 }
 </style>

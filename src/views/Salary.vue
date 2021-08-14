@@ -165,7 +165,7 @@ export default {
           this.total = 4 * this.rate
           this.timeTest = 4
         }else if (this.totalTestPercent >= 60 && this.totalTestPercent <= 70) {
-          this.total = 0 * this.rate
+          this.total = 0
           this.timeTest = 0
         }else if (this.totalTestPercent < 60) {
           this.hours -= 4
@@ -185,9 +185,9 @@ export default {
 
 
       if (this.hours <= 176){
-        this.total = this.hours * this.rate
+        this.total += this.hours * this.rate
       }else if (this.hours > 176){
-        this.total = 176 * this.rate + this.overTime * this.overRate
+        this.total += 176 * this.rate + this.overTime * this.overRate
       }
     },
   },
